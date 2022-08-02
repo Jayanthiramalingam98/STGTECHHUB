@@ -1,0 +1,59 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>STG TECH HUB</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="../../assets/STGlogo.jpg">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<!-- <body class="mat-typography"> -->
+
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <app-root></app-root>
+</body>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+<script>
+
+  var messages = ['🔊 Hey', '🔊 Hi, there!', '🔊 Hi!', '🔊 Hello'];
+
+  if(annyang){
+      console.log("We have annyang!");
+
+      var commands = {
+          'Hello' : hello,
+          'What is your name' : myname,
+          'Open GCP':Redirect,
+      }
+
+      function hello(){
+          var randomIndex = Math.round(Math.random() * messages.length);
+          console.log(`%c ${messages[randomIndex]}`,'color: green; font-weight:bold;');
+      }
+
+      function myname(){
+          console.log("My name is Jayu!");
+      }
+      function Redirect() {
+               window.location = '../../assets/GCP Framework.pdf','_blank';
+            }
+      // Add Commands
+      annyang.addCommands(commands);
+
+      // Start listening
+      annyang.start();
+
+  }
+
+</script>
+
+</html>

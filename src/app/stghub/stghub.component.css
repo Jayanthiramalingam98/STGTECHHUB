@@ -1,0 +1,31 @@
+
+    .button {
+      display: inline-block;
+      padding: 5px 5px;
+      font-size: 14px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      color: #fff;
+      background-color: #1034d6;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0px rgb(233, 228, 228);
+      margin-left: 50px;
+      
+    }
+    
+    .button:hover {background-color: #1034d6}
+    
+    .button:active {
+      background-color: #121312;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+    mat-card-title {
+      color: blue;
+      font-size: 55px;
+      justify-content: center;
+      display: flex;
+    }
