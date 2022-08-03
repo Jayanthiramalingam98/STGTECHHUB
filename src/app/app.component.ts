@@ -14,7 +14,7 @@ export class AppComponent {
     this.dialog.open(StghubComponent);
   }
   openJava(){
-    this.dialog.open(StghubComponent);
+    this.dialog.open(MenuComponent);
   }
 }
 
